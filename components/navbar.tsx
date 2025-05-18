@@ -28,34 +28,34 @@ export const Navbar = () => {
       })
     }
   }, [isAnimating, openMenu])
-  function triggerPageTransition() {
-    document.documentElement.animate(
-      [
-        {
-          clipPath: "polygon(25% 75%, 75% 75%, 75% 75%, 25% 75%)",
-        },
-        {
-          clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
-        },
-      ],
-      {
-        duration: 2000,
-        easing: "cubic-bezier(0.9, 0, 0.1, 1)",
-        pseudoElement: "::view-transition-new(root)",
-      }
-    )
-  }
+  // function triggerPageTransition() {
+  //   document.documentElement.animate(
+  //     [
+  //       {
+  //         clipPath: "polygon(25% 75%, 75% 75%, 75% 75%, 25% 75%)",
+  //       },
+  //       {
+  //         clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
+  //       },
+  //     ],
+  //     {
+  //       duration: 2000,
+  //       easing: "cubic-bezier(0.9, 0, 0.1, 1)",
+  //       pseudoElement: "::view-transition-new(root)",
+  //     }
+  //   )
+  // }
 
-  const handleNavigation = (path: string) => (e: any) => {
-    if (path === pathname) {
-      e.preventDefault()
-      return
-    }
+  // const handleNavigation = (path: string) => (e: any) => {
+  //   if (path === pathname) {
+  //     e.preventDefault()
+  //     return
+  //   }
 
-    router.push(path, {
-      onTransitionReady: triggerPageTransition,
-    })
-  }
+  //   router.push(path, {
+  //     onTransitionReady: triggerPageTransition,
+  //   })
+  // }
   return (
     <>
       <HeroUINavbar
