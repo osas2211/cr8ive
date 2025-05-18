@@ -94,7 +94,7 @@ export const Navbar = () => {
                   <Link
                     className="flex justify-start items-center gap-1"
                     href="/contact"
-                    onClick={handleNavigation("/contact")}
+                    // onClick={handleNavigation("/contact")}
                   >
                     <p>contact</p>
                   </Link>
