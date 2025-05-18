@@ -91,13 +91,13 @@ export const Navbar = () => {
                   >
                     <p>culture</p>
                   </NextLink>
-                  <Link
+                  <NextLink
                     className="flex justify-start items-center gap-1"
-                    href="/contact"
+                    href="/"
                     // onClick={handleNavigation("/contact")}
                   >
                     <p>contact</p>
-                  </Link>
+                  </NextLink>
                 </>
               )}
               <div
