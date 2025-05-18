@@ -101,7 +101,7 @@ export default function SelectedWorks() {
         ))}
       </section>
       <section className="outro">
-        <h1>Let's build a brand that leaves a mark.</h1>
+        <h1>Let&apos;s build a brand that leaves a mark.</h1>
       </section>
     </div>
   )

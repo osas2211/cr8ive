@@ -178,7 +178,7 @@ export const Menu = ({
       <div className="menu z-[10]" ref={menuRef}>
         <div className="col col-1">
           <div className="logo">
-            <a href="#">Cr8ive*</a>
+            <p>Cr8ive*</p>
           </div>
           <div className="links">
             <div className="link">

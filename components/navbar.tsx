@@ -14,6 +14,7 @@ import { useCallback, useState } from "react"
 import { Menu } from "./Menu"
 import { usePathname } from "next/navigation"
 import { useTransitionRouter } from "next-view-transitions"
+import Link from "next/link"
 
 export const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false)
@@ -90,13 +91,13 @@ export const Navbar = () => {
                   >
                     <p>culture</p>
                   </NextLink>
-                  <NextLink
+                  <Link
                     className="flex justify-start items-center gap-1"
                     href="/contact"
                     onClick={handleNavigation("/contact")}
                   >
                     <p>contact</p>
-                  </NextLink>
+                  </Link>
                 </>
               )}
               <div
