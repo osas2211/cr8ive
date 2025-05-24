@@ -132,7 +132,7 @@ export function WebLoader({ children }: { children: ReactNode }) {
       },
       "<"
     )
-  })
+  }, [])
 
   return (
     <>
