@@ -92,20 +92,20 @@ export default defineConfig([
     files: ["**/*.ts", "**/*.tsx"],
 
     rules: {
-      "no-console": "off",
+      "no-console": "warn",
       "react/prop-types": "off",
       "react/jsx-uses-react": "off",
       "react/react-in-jsx-scope": "off",
       "react-hooks/exhaustive-deps": "off",
       "jsx-a11y/click-events-have-key-events": "off",
       "jsx-a11y/interactive-supports-focus": "off",
-      "prettier/prettier": "off",
+      "prettier/prettier": "warn",
       "no-unused-vars": "off",
       "unused-imports/no-unused-vars": "off",
-      "unused-imports/no-unused-imports": "off",
+      "unused-imports/no-unused-imports": "warn",
 
       "@typescript-eslint/no-unused-vars": [
-        "off",
+        "warn",
         {
           args: "after-used",
           ignoreRestSiblings: false,
@@ -114,7 +114,7 @@ export default defineConfig([
       ],
 
       "import/order": [
-        "off",
+        "warn",
         {
           groups: [
             "type",
@@ -139,10 +139,10 @@ export default defineConfig([
         },
       ],
 
-      "react/self-closing-comp": "off",
+      "react/self-closing-comp": "warn",
 
       "react/jsx-sort-props": [
-        "off",
+        "warn",
         {
           callbacksLast: true,
           shorthandFirst: true,
@@ -152,7 +152,7 @@ export default defineConfig([
       ],
 
       "padding-line-between-statements": [
-        "off",
+        "warn",
         {
           blankLine: "always",
           prev: "*",
