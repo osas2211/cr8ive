@@ -5,12 +5,11 @@ import { Navbar } from "../navbar"
 import { About } from "./AboutSection"
 import { Works } from "./Works"
 import { Footer } from "../Footer"
+import { PinnedCards } from "../choreography/PinnedCards"
 
 export const Home = () => {
   return (
     <div className="relative bg-white  overflow-x-hidden no-scrollbar">
-      {/* <div className="reveal-block">
-      </div> */}
       <Navbar />
 
       <div className="overflow-hidden h-screen  w-full flex items-center justify-center">
@@ -38,7 +37,8 @@ export const Home = () => {
         </p>
       </div>
 
-      <div className="w-screen min-h-screen">
+      <div className="min-h-screen">
+        <PinnedCards />
         <About />
         <Works />
         <Footer />
