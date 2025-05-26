@@ -10,7 +10,7 @@ const ShowcasePage = () => {
       <Navbar />
       <div className="min-h-screen">
         <PinnedCards />
-        <Lookbook />
+        {/* <Lookbook /> */}
       </div>
     </div>
   )
