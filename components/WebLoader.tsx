@@ -217,7 +217,7 @@ export function WebLoader({ children }: { children: ReactNode }) {
         </div>
       </div>
 
-      <div className="relative z-[2000]">{children}</div>
+      <div className="relative">{children}</div>
     </div>
   )
 }

@@ -1,8 +1,9 @@
-"use client";
-import React from "react";
+"use client"
+import React from "react"
 
-import { PinnedCards } from "@/components/choreography/PinnedCards";
-import { Navbar } from "@/components/navbar";
+import { PinnedCards } from "@/components/choreography/PinnedCards"
+import { Navbar } from "@/components/navbar"
+import { Footer } from "@/components/Footer"
 
 const ShowcasePage = () => {
   return (
@@ -11,9 +12,10 @@ const ShowcasePage = () => {
       <div className="min-h-screen">
         <PinnedCards />
         {/* <Lookbook /> */}
+        <Footer />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ShowcasePage;
+export default ShowcasePage
