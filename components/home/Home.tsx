@@ -14,7 +14,7 @@ export const Home = () => {
 
       <div className="overflow-hidden h-screen  w-full flex items-center justify-center">
         <div className="absolute top-0 left-0 w-full h-screen z-[1] bg-[#00000048]"></div>
-        <div className="absolute top-0 left-0 w-full h-screen hero-img_  scale-[1.5] overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-screen hero-img_ overflow-hidden">
           {/* <Image
             src="/hero-img.jpg"
             alt="Cr8ive Hero Image"
