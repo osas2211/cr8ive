@@ -9,6 +9,7 @@ import { Works } from "./Works"
 import Image from "next/image"
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
+import TextPlugin from "gsap/TextPlugin"
 
 export const Home = () => {
   useGSAP(() => {
@@ -19,6 +20,15 @@ export const Home = () => {
         scrub: true,
       },
       scale: 1.5,
+    })
+    gsap.to(".home-hero-content", {
+      scrollTrigger: {
+        trigger: ".home-hero-about",
+        scrub: true,
+      },
+      scale: 1.5,
+      y: 100,
+      opacity: 0,
     })
   })
   return (
@@ -45,9 +55,11 @@ export const Home = () => {
             <source src="/hero-vid.mp4" />
           </video> */}
         </div>
-        <p className="relative z-[2] text-white text-center md:text-[14px] text-[16px] tracking-[2px] reveal-block">
-          Where ideas races to life for the world&apos;s ambitious brands.
-        </p>
+        <div className="relative home-hero-content z-[2]">
+          <p className="text-white text-center md:text-[14px] text-[16px] tracking-[2px] reveal-block">
+            Where ideas races to life for the world&apos;s ambitious brands.
+          </p>
+        </div>
       </div>
 
       <div className="min-h-screen !bg-black relative">
