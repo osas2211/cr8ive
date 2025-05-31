@@ -84,7 +84,7 @@ export const Navbar = () => {
                 <>
                   <NextLink
                     className="flex justify-start items-center gap-1"
-                    href="/"
+                    href="/showcase"
                   >
                     <p>showcase</p>
                   </NextLink>

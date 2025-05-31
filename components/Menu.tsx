@@ -177,7 +177,7 @@ export const Menu = ({
           </div>
           <div className="links">
             <div className="link">
-              <Link href="/">Showcase</Link>
+              <Link href="/showcase">Showcase</Link>
             </div>
             <div className="link">
               <Link href="/">Culture</Link>
