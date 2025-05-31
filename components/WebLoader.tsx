@@ -15,6 +15,7 @@ export function WebLoader({ children }: { children: ReactNode }) {
   }, [])
 
   useGSAP(() => {
+    gsap.set(".loader", { display: "block" })
     gsap.set(".hero-img_", { scale: 1.5 })
     gsap.set(".reveal-block", { opacity: 0 })
     const tl = gsap.timeline({
@@ -107,6 +108,7 @@ export function WebLoader({ children }: { children: ReactNode }) {
             { opacity: 0 },
             { opacity: 1, duration: 2, ease: "hop" }
           )
+          gsap.to(".loader", { display: "none" })
         },
       },
       "<"

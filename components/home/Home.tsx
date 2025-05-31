@@ -5,7 +5,6 @@ import { Navbar } from "../navbar"
 import { About } from "./AboutSection"
 import { Works } from "./Works"
 import { Footer } from "../Footer"
-import { PinnedCards } from "../choreography/PinnedCards"
 
 export const Home = () => {
   return (
@@ -38,7 +37,6 @@ export const Home = () => {
       </div>
 
       <div className="min-h-screen">
-        <PinnedCards />
         <About />
         <Works />
         <Footer />

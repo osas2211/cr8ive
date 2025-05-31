@@ -158,6 +158,7 @@ p {
   height: 100svh;
   overflow: hidden;
   z-index: 2;
+  display: none;
 }
 
 .overlay {
