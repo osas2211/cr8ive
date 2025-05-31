@@ -150,7 +150,7 @@ export function WebLoader({ children }: { children: ReactNode }) {
 
   return (
     <div ref={scope as any}>
-      <div className="loader w-screen z-[1000]">
+      <div className="loader w-screen">
         <div className="overlay">
           <div className="block" />
           <div className="block" />
