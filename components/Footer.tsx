@@ -1,11 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
-"use client"
-import { Link } from "@heroui/link"
-import gsap from "gsap"
-import React, { useEffect, useRef } from "react"
+"use client";
+import { Link } from "@heroui/link";
+import gsap from "gsap";
+import React, { useEffect, useRef } from "react";
 
 export const Footer = () => {
-  const scope = useRef(null)
+  const scope = useRef(null);
+
   useEffect(() => {
     gsap.matchMedia(scope).add("(min-width:760px)", () => {
       gsap.fromTo(
@@ -17,14 +18,14 @@ export const Footer = () => {
           y: 0,
           // ease: "power4.out",
           scrollTrigger: { trigger: ".footermarquee", scrub: true },
-        }
-      )
-    })
-  }, [])
+        },
+      );
+    });
+  }, []);
 
   return (
     <>
-      <div className="relative" ref={scope}>
+      <div ref={scope} className="relative">
         <div
           className="bg-[#101012] text-[#eee] w-full md:pl-[40px] pl-5 2xl:py-[70px] md:py-[48px] py-10 overflow-hidden z-[20] relative"
           id="footer-section"
@@ -41,8 +42,8 @@ export const Footer = () => {
 
             <div className="mt-5">
               <Link
-                href={""}
                 className="uppercase md:text-sm text-xs underline font-semibold"
+                href={""}
               >
                 schedule a call
               </Link>
@@ -50,7 +51,7 @@ export const Footer = () => {
           </div>
 
           <div className="flex lg:flex-row flex-col">
-            <div className="2xl:min-w-[640.5px] md:min-w-[30%]"></div>
+            <div className="2xl:min-w-[640.5px] md:min-w-[30%]" />
             <div className="2xl:text-[40px] md:text-[32px] text-[19px] relative service-text md:w-[70%] w-full">
               <div className="flex flex-wrap items-center md:justify-between gap-4 md:text-sm text-[10px] uppercase text-[#eee] pr-5 md:pr-10">
                 <div>
@@ -60,9 +61,9 @@ export const Footer = () => {
                     </span>
                     <div className="absolute top-[30px] left-[0px] h-[150px] md:h-[180px] w-[300px] md:block hidden">
                       <img
-                        src="https://Grainient.b-cdn.net/Inspirux/dribble.png"
                         alt=""
                         className="h-full w-full object-cover block rounded-md"
+                        src="https://Grainient.b-cdn.net/Inspirux/dribble.png"
                       />
                     </div>
                   </div>
@@ -74,9 +75,9 @@ export const Footer = () => {
                     </span>
                     <div className="absolute top-[30px] left-[50%] translate-x-[-50%] h-[150px] md:h-[180px] w-[300px] md:block hidden">
                       <img
-                        src="https://Grainient.b-cdn.net/Inspirux/behance.png"
                         alt=""
                         className="h-full w-full object-cover block rounded-md"
+                        src="https://Grainient.b-cdn.net/Inspirux/behance.png"
                       />
                     </div>
                   </div>
@@ -89,9 +90,9 @@ export const Footer = () => {
                     </span>
                     <div className="absolute top-[30px] left-[50%] translate-x-[-50%] h-[150px] md:h-[180px] w-[300px] md:block hidden">
                       <img
-                        src="https://Grainient.b-cdn.net/Inspirux/linkedin.png"
                         alt=""
                         className="h-full w-full object-cover block rounded-md"
+                        src="https://Grainient.b-cdn.net/Inspirux/linkedin.png"
                       />
                     </div>
                   </div>
@@ -103,9 +104,9 @@ export const Footer = () => {
                     </span>
                     <div className="absolute top-[30px] left-[50%] translate-x-[-50%] h-[150px] md:h-[180px] w-[300px] md:block hidden">
                       <img
-                        src="https://Grainient.b-cdn.net/Inspirux/twitter.png"
                         alt=""
                         className="h-full w-full object-cover block rounded-md"
+                        src="https://Grainient.b-cdn.net/Inspirux/twitter.png"
                       />
                     </div>
                   </div>
@@ -117,9 +118,9 @@ export const Footer = () => {
                     </span>
                     <div className="absolute top-[30px] left-[50%] translate-x-[-50%] h-[150px] md:h-[180px] w-[300px] md:block hidden">
                       <img
-                        src="https://Grainient.b-cdn.net/Inspirux/instagram.png"
                         alt=""
                         className="h-full w-full object-cover block rounded-md"
+                        src="https://Grainient.b-cdn.net/Inspirux/instagram.png"
                       />
                     </div>
                   </div>
@@ -131,9 +132,9 @@ export const Footer = () => {
                     </span>
                     <div className="absolute top-[30px] left-[50%] translate-x-[-50%] h-[150px] md:h-[180px] w-[300px] md:block hidden">
                       <img
-                        src="https://Grainient.b-cdn.net/Inspirux/facebook.png"
                         alt=""
                         className="h-full w-full object-cover block rounded-md"
+                        src="https://Grainient.b-cdn.net/Inspirux/facebook.png"
                       />
                     </div>
                   </div>
@@ -145,9 +146,9 @@ export const Footer = () => {
                     </span>
                     <div className="absolute top-[30px] right-[0px] h-[150px] md:h-[180px] w-[300px] md:block hidden">
                       <img
-                        src="https://Grainient.b-cdn.net/Inspirux/youtube.png"
                         alt=""
                         className="h-full w-full object-cover block rounded-md"
+                        src="https://Grainient.b-cdn.net/Inspirux/youtube.png"
                       />
                     </div>
                   </div>
@@ -167,9 +168,9 @@ export const Footer = () => {
                           HELLO@HEROUI.COM
                         </p>
                         <img
+                          alt="arrow"
                           className="object-contain md:h-[48px] md:w-[48px] w-[12px] h-[12px] mail-arrow mt-4 inline-block"
                           src="https://Grainient.b-cdn.net/Inspirux/footerArrow2.png"
-                          alt="arrow"
                         />
                       </div>
                     </div>
@@ -224,5 +225,5 @@ export const Footer = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};

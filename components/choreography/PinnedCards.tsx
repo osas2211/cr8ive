@@ -1,15 +1,18 @@
-"use client"
-import React from "react"
-import "./index.css"
-import { useMarquee } from "@/hooks/useMarquee"
-import { useGSAP } from "@gsap/react"
-import { usePinnedCardsAnimation } from "@/hooks/usePinnedCardAnimations"
+"use client";
+import React from "react";
+
+import "./index.css";
+import { useGSAP } from "@gsap/react";
+
+import { usePinnedCardsAnimation } from "@/hooks/usePinnedCardAnimations";
 
 export const PinnedCards = () => {
-  const runAnimation = usePinnedCardsAnimation()
+  const runAnimation = usePinnedCardsAnimation();
+
   useGSAP(() => {
-    runAnimation()
-  }, [])
+    runAnimation();
+  }, []);
+
   return (
     <div className="pinned-trigger overflow-x-hidden">
       {/* <section className="pinned-intro">
@@ -38,7 +41,7 @@ export const PinnedCards = () => {
               </div>
             </div>
             <div className="pinned-card-img">
-              <img src="/card-img-1.jpg" alt="" />
+              <img alt="" src="/card-img-1.jpg" />
             </div>
           </div>
         </div>
@@ -56,7 +59,7 @@ export const PinnedCards = () => {
               </div>
             </div>
             <div className="pinned-card-img">
-              <img src="/card-img-2.jpg" alt="" />
+              <img alt="" src="/card-img-2.jpg" />
             </div>
           </div>
         </div>
@@ -74,7 +77,7 @@ export const PinnedCards = () => {
               </div>
             </div>
             <div className="pinned-card-img">
-              <img src="/card-img-3.jpg" alt="" />
+              <img alt="" src="/card-img-3.jpg" />
             </div>
           </div>
         </div>
@@ -92,7 +95,7 @@ export const PinnedCards = () => {
               </div>
             </div>
             <div className="pinned-card-img">
-              <img src="/card-img-4.jpg" alt="" />
+              <img alt="" src="/card-img-4.jpg" />
             </div>
           </div>
         </div>
@@ -101,5 +104,5 @@ export const PinnedCards = () => {
         <h1>Architecture reimagined for the virtual age.</h1>
       </section>
     </div>
-  )
-}
+  );
+};

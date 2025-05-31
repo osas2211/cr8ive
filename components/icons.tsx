@@ -1,6 +1,6 @@
-import * as React from "react";
+import * as React from "react"
 
-import { IconSvgProps } from "@/types";
+import { IconSvgProps } from "@/types"
 
 export const Logo: React.FC<IconSvgProps> = ({
   size = 36,
@@ -18,11 +18,11 @@ export const Logo: React.FC<IconSvgProps> = ({
     <path
       clipRule="evenodd"
       d="M17.6482 10.1305L15.8785 7.02583L7.02979 22.5499H10.5278L17.6482 10.1305ZM19.8798 14.0457L18.11 17.1983L19.394 19.4511H16.8453L15.1056 22.5499H24.7272L19.8798 14.0457Z"
-      fill="currentColor"
+      fill="red"
       fillRule="evenodd"
     />
   </svg>
-);
+)
 
 export const DiscordIcon: React.FC<IconSvgProps> = ({
   size = 24,
@@ -42,8 +42,8 @@ export const DiscordIcon: React.FC<IconSvgProps> = ({
         fill="currentColor"
       />
     </svg>
-  );
-};
+  )
+}
 
 export const TwitterIcon: React.FC<IconSvgProps> = ({
   size = 24,
@@ -63,8 +63,8 @@ export const TwitterIcon: React.FC<IconSvgProps> = ({
         fill="currentColor"
       />
     </svg>
-  );
-};
+  )
+}
 
 export const GithubIcon: React.FC<IconSvgProps> = ({
   size = 24,
@@ -86,8 +86,8 @@ export const GithubIcon: React.FC<IconSvgProps> = ({
         fillRule="evenodd"
       />
     </svg>
-  );
-};
+  )
+}
 
 export const MoonFilledIcon = ({
   size = 24,
@@ -109,7 +109,7 @@ export const MoonFilledIcon = ({
       fill="currentColor"
     />
   </svg>
-);
+)
 
 export const SunFilledIcon = ({
   size = 24,
@@ -131,7 +131,7 @@ export const SunFilledIcon = ({
       <path d="M12 22.96a.969.969 0 01-1-.96v-.08a1 1 0 012 0 1.038 1.038 0 01-1 1.04zm7.14-2.82a1.024 1.024 0 01-.71-.29l-.13-.13a1 1 0 011.41-1.41l.13.13a1 1 0 010 1.41.984.984 0 01-.7.29zm-14.28 0a1.024 1.024 0 01-.71-.29 1 1 0 010-1.41l.13-.13a1 1 0 011.41 1.41l-.13.13a1 1 0 01-.7.29zM22 13h-.08a1 1 0 010-2 1.038 1.038 0 011.04 1 .969.969 0 01-.96 1zM2.08 13H2a1 1 0 010-2 1.038 1.038 0 011.04 1 .969.969 0 01-.96 1zm16.93-7.01a1.024 1.024 0 01-.71-.29 1 1 0 010-1.41l.13-.13a1 1 0 011.41 1.41l-.13.13a.984.984 0 01-.7.29zm-14.02 0a1.024 1.024 0 01-.71-.29l-.13-.14a1 1 0 011.41-1.41l.13.13a1 1 0 010 1.41.97.97 0 01-.7.3zM12 3.04a.969.969 0 01-1-.96V2a1 1 0 012 0 1.038 1.038 0 01-1 1.04z" />
     </g>
   </svg>
-);
+)
 
 export const HeartFilledIcon = ({
   size = 24,
@@ -156,7 +156,7 @@ export const HeartFilledIcon = ({
       strokeWidth={1.5}
     />
   </svg>
-);
+)
 
 export const SearchIcon = (props: IconSvgProps) => (
   <svg
@@ -184,4 +184,4 @@ export const SearchIcon = (props: IconSvgProps) => (
       strokeWidth="2"
     />
   </svg>
-);
+)

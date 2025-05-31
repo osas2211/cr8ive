@@ -1,8 +1,8 @@
-"use client"
-import { PinnedCards } from "@/components/choreography/PinnedCards"
-import { Lookbook } from "@/components/home/Gallery"
-import { Navbar } from "@/components/navbar"
-import React from "react"
+"use client";
+import React from "react";
+
+import { PinnedCards } from "@/components/choreography/PinnedCards";
+import { Navbar } from "@/components/navbar";
 
 const ShowcasePage = () => {
   return (
@@ -13,7 +13,7 @@ const ShowcasePage = () => {
         {/* <Lookbook /> */}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ShowcasePage
+export default ShowcasePage;

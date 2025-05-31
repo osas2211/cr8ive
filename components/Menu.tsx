@@ -1,11 +1,5 @@
 "use client"
-import React, {
-  useEffect,
-  useState,
-  useCallback,
-  useRef,
-  useLayoutEffect,
-} from "react"
+import React, { useEffect, useCallback, useRef, useLayoutEffect } from "react"
 import Link from "next/link"
 import "../styles/nav.css"
 import gsap from "gsap"
@@ -60,6 +54,7 @@ export const Menu = ({
   const animateMenu = useCallback((open: boolean) => {
     if (!menuRef.current) {
       console.log("Menu ref is not available")
+
       return
     }
 
@@ -175,14 +170,14 @@ export const Menu = ({
         <a href="#">Cr8ive</a>
       </div> */}
 
-      <div className="menu z-[10]" ref={menuRef}>
+      <div ref={menuRef} className="menu z-[10]">
         <div className="col col-1">
           <div className="logo">
             <p>Cr8ive*</p>
           </div>
           <div className="links">
             <div className="link">
-              <Link href="/">Work</Link>
+              <Link href="/">Showcase</Link>
             </div>
             <div className="link">
               <Link href="/">Culture</Link>
@@ -197,11 +192,11 @@ export const Menu = ({
           </div>
           <div className="video-wrapper">
             <video
-              src={"/hero-vid.mp4"}
-              muted
               autoPlay
               loop
+              muted
               poster="hero-img.jpg"
+              src={"/hero-vid.mp4"}
             />
           </div>
         </div>

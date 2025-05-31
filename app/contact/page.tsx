@@ -1,23 +1,23 @@
-"use client"
-import { useRevealer } from "@/hooks/useRevealer"
-import { useGSAP } from "@gsap/react"
+"use client";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import SplitText from "gsap/SplitText";
 
-import gsap from "gsap"
-import SplitText from "gsap/SplitText"
+import { useRevealer } from "@/hooks/useRevealer";
 
-gsap.registerPlugin(SplitText)
+gsap.registerPlugin(SplitText);
 
 const Contact = () => {
-  useRevealer()
+  useRevealer();
 
   useGSAP(() => {
     const splitText = SplitText.create("h2", {
       type: "lines",
       linesClass: "line",
       mask: "lines",
-    })
+    });
 
-    gsap.set(splitText.lines, { y: "110%" })
+    gsap.set(splitText.lines, { y: "110%" });
 
     gsap.to(splitText.lines, {
       y: "0%",
@@ -25,12 +25,12 @@ const Contact = () => {
       stagger: 0.1,
       delay: 1.75,
       ease: "power4.out",
-    })
-  }, {})
+    });
+  }, {});
 
   return (
     <>
-      <div className="revealer"></div>
+      <div className="revealer" />
       <div className="contact">
         <div className="col">
           <h2>Contact Us</h2>
@@ -54,7 +54,7 @@ const Contact = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

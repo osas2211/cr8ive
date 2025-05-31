@@ -1,8 +1,8 @@
-import React, { ReactNode } from "react"
-import { Navbar } from "@/components/navbar"
-import { Link } from "@heroui/link"
-import { WebLoader } from "./WebLoader"
-import { SmoothScroller } from "./SmoothScroller"
+import React, { ReactNode } from "react";
+import { Link } from "@heroui/link";
+
+import { WebLoader } from "./WebLoader";
+import { SmoothScroller } from "./SmoothScroller";
 
 export const PageWrapper = ({ children }: { children: ReactNode }) => {
   return (
@@ -26,5 +26,5 @@ export const PageWrapper = ({ children }: { children: ReactNode }) => {
         </WebLoader>
       </div>
     </SmoothScroller>
-  )
-}
+  );
+};

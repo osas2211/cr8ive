@@ -1,44 +1,46 @@
-"use client"
-import { useTextReveal } from "@/hooks/useTextReveal"
-import { useGSAP } from "@gsap/react"
-import gsap from "gsap"
-import Link from "next/link"
-import React, { useEffect, useRef, useState } from "react"
-import { BsArrowRightShort } from "react-icons/bs"
-import SelectedWorks from "./SelectedWorks"
-import { Lookbook } from "./Gallery"
+"use client";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import React, { useEffect, useRef, useState } from "react";
+
+import { Lookbook } from "./Gallery";
+
+import { useTextReveal } from "@/hooks/useTextReveal";
 
 export const Works = () => {
-  const { scope: textRevealScope } = useTextReveal(".work-text-reveal", false)
+  const { scope: textRevealScope } = useTextReveal(".work-text-reveal", false);
   const { scope: textRevealScopeLg } = useTextReveal(
     ".work-text-reveal-lg",
-    false
-  )
+    false,
+  );
 
-  const scope: React.Ref<HTMLDivElement | null> = useRef(null)
-  const timeline = useRef(gsap.timeline({ paused: true }))
-  const [count, setCount] = useState(0) // Start at 1%
+  const scope: React.Ref<HTMLDivElement | null> = useRef(null);
+  const timeline = useRef(gsap.timeline({ paused: true }));
+  const [count, setCount] = useState(0); // Start at 1%
+
   useEffect(() => {
     // const progress = Number(tl.current.progress() * 100).toFixed(0)
     // setCount(Number(progress))
 
-    const duration = 5000 // Total duration in ms (5 seconds)
-    const interval = 50 // Update every 50ms
-    const increment = 300 / (duration / interval) // Amount to increment per interval
+    const duration = 5000; // Total duration in ms (5 seconds)
+    const interval = 50; // Update every 50ms
+    const increment = 300 / (duration / interval); // Amount to increment per interval
 
     const timer = setInterval(() => {
       setCount((prev) => {
         if (prev + increment >= 100) {
-          timeline.current.play()
-          clearInterval(timer) // Stop the timer once we reach 100
-          return 100
-        }
-        return prev + increment
-      })
-    }, interval)
+          timeline.current.play();
+          clearInterval(timer); // Stop the timer once we reach 100
 
-    return () => clearInterval(timer) // Cleanup on unmount
-  }, [])
+          return 100;
+        }
+
+        return prev + increment;
+      });
+    }, interval);
+
+    return () => clearInterval(timer); // Cleanup on unmount
+  }, []);
 
   useGSAP(
     () => {
@@ -58,7 +60,7 @@ export const Works = () => {
                 ? "+=1500px"
                 : "+=2200px",
             },
-          }
+          },
         )
         .fromTo(
           "#selected-works-right",
@@ -74,7 +76,7 @@ export const Works = () => {
                 ? "+=1500px"
                 : "+=2200px",
             },
-          }
+          },
         )
         .fromTo(
           scope.current?.querySelectorAll(".selected-work-link") as never,
@@ -92,26 +94,27 @@ export const Works = () => {
                 ? "+=1500px"
                 : "+=3800px",
             },
-          }
-        )
+          },
+        );
     },
-    { scope }
-  )
+    { scope },
+  );
+
   return (
     <>
-      <div className="bg-[#f9faf7] overflow-x-hidden" ref={scope as any}>
+      <div ref={scope as any} className="bg-[#f9faf7] overflow-x-hidden">
         <div
           className="py-[40px] pb-[50px] md:pb-[100px] w-full flex flex-col items-center justify-center md:text-[15vw] text-[16vw] leading-[105%] tracking-[-1vw] uppercase will-change-scroll"
           id="selected-works-text"
         >
           <h2 id="selected-works-left">Selected</h2>
-          <div id="selected-works-right" className="flex gap-4 items-baseline">
+          <div className="flex gap-4 items-baseline" id="selected-works-right">
             <div className="relative max-w-[326px] md:max-w-[326px]">
               <video
-                className="w-[100%] h-[50px] md:w-[100%] md:h-[201px] lg:h-[201px] object-cover rounded-lg"
                 autoPlay
                 loop
                 muted
+                className="w-[100%] h-[50px] md:w-[100%] md:h-[201px] lg:h-[201px] object-cover rounded-lg"
               >
                 <source src="/selected-works-vid.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
@@ -124,5 +127,5 @@ export const Works = () => {
         <Lookbook />
       </div>
     </>
-  )
-}
+  );
+};

@@ -1,16 +1,18 @@
-"use client"
-import { useTextReveal } from "@/hooks/useTextReveal"
-import Link from "next/link"
-import React from "react"
+"use client";
+import Link from "next/link";
+import React from "react";
+
+import { useTextReveal } from "@/hooks/useTextReveal";
 
 export const About = () => {
-  const { scope } = useTextReveal(".about-text-reveal", true)
-  const {} = useTextReveal(".about-text-reveal-2", true)
-  const { scope: smallScope } = useTextReveal(".about-text-reveal-small", true)
+  const { scope } = useTextReveal(".about-text-reveal", true);
+  const {} = useTextReveal(".about-text-reveal-2", true);
+  const { scope: smallScope } = useTextReveal(".about-text-reveal-small", true);
+
   return (
     <div
-      className="w-full md:min-h-[70vh] my-0 bg-[#f9faf7] md:px-[40px] px-5 2xl:py-[100] md:py-[100] py-[70px]  *:text-black"
       ref={scope as any}
+      className="w-full md:min-h-[70vh] my-0 bg-[#f9faf7] md:px-[40px] px-5 2xl:py-[100] md:py-[100] py-[70px]  *:text-black"
     >
       <div className="uppercase md:text-sm text-[10px] md:sticky md:top-[70px] 2xl:min-w-[640.5px] md:min-w-[30%] md:-mb-[60px] mb-[30px] about-sticky *:text-black *:leading-[14px]">
         <p className="overflow-hidden">
@@ -28,7 +30,7 @@ export const About = () => {
         </p>
       </div>
       <div className="flex">
-        <div className="2xl:min-w-[640.5px] md:min-w-[30%]"></div>
+        <div className="2xl:min-w-[640.5px] md:min-w-[30%]" />
         <div className="2xl:text-[40px] md:text-[32px] text-[19px] relative about-text md:w-[70%] w-full">
           <div className="md:block">
             <h2 className="overflow-hidden">
@@ -118,16 +120,16 @@ export const About = () => {
           </div>
           <div>
             <Link
-              href={""}
               className="uppercase text-sm underline font-semibold"
+              href={""}
             >
               read more about us
             </Link>
           </div>
           <div
+            ref={smallScope as any}
             className="flex justify-end items-end 2xl:mt-[150px] md:mt-[100px] mt-8 md:text-xs text-[10px] uppercase"
             id="about-keep-scrolling"
-            ref={smallScope as any}
           >
             <div className="*:text-black *:leading-[14px]">
               <p className="overflow-hidden">
@@ -144,5 +146,5 @@ export const About = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};

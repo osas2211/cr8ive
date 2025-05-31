@@ -1,11 +1,11 @@
-"use client"
-import { useRef } from "react"
-import gsap from "gsap"
-import { useGSAP } from "@gsap/react"
-import { ScrollTrigger } from "gsap/all"
+"use client";
+import { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/all";
 
-gsap.registerPlugin(useGSAP)
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
 
 const Card = ({ title = "", copy = "", index = 0 }) => {
   return (
@@ -16,12 +16,12 @@ const Card = ({ title = "", copy = "", index = 0 }) => {
           <p>{copy}</p>
         </div>
         <div className="card-img">
-          <img src={`/assets/card-${index + 1}.jpeg`} alt={title} />
+          <img alt={title} src={`/assets/card-${index + 1}.jpeg`} />
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default function SelectedWorks() {
   const cards = [
@@ -41,13 +41,13 @@ export default function SelectedWorks() {
       title: "Product Design",
       copy: "We craft user-first products that are both functional and visually appealing, delivering solutions that leave a lasting impression.",
     },
-  ]
+  ];
 
-  const container = useRef()
+  const container = useRef();
 
   useGSAP(
     () => {
-      const cards = gsap.utils.toArray(".card")
+      const cards = gsap.utils.toArray(".card");
 
       ScrollTrigger.create({
         trigger: cards[0] as any,
@@ -56,11 +56,11 @@ export default function SelectedWorks() {
         end: "top 30%",
         pin: ".intro",
         pinSpacing: false,
-      })
+      });
 
       cards.forEach((card: any, index) => {
-        const isLastCard = index === cards.length - 1
-        const cardInner = card.querySelector(".card-inner")
+        const isLastCard = index === cards.length - 1;
+        const cardInner = card.querySelector(".card-inner");
 
         if (!isLastCard) {
           ScrollTrigger.create({
@@ -70,7 +70,7 @@ export default function SelectedWorks() {
             end: "top 65%",
             pin: true,
             pinSpacing: false,
-          })
+          });
 
           gsap.to(cardInner, {
             y: `-${(cards.length - index) * 14}vh`,
@@ -82,19 +82,19 @@ export default function SelectedWorks() {
               end: "top 65%",
               scrub: true,
             },
-          })
+          });
         }
-      })
+      });
 
       return () => {
-        ScrollTrigger.getAll().forEach((trigger) => trigger.kill())
-      }
+        ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      };
     },
-    { scope: container }
-  )
+    { scope: container },
+  );
 
   return (
-    <div className="" ref={container as any}>
+    <div ref={container as any} className="">
       <section className="cards">
         {cards.map((card, index) => (
           <Card key={index} {...card} index={index} />
@@ -104,5 +104,5 @@ export default function SelectedWorks() {
         <h1>Let&apos;s build a brand that leaves a mark.</h1>
       </section>
     </div>
-  )
+  );
 }
