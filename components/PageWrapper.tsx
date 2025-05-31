@@ -1,8 +1,8 @@
-import React, { ReactNode } from "react";
-import { Link } from "@heroui/link";
+import React, { ReactNode } from "react"
+import { Link } from "@heroui/link"
 
-import { WebLoader } from "./WebLoader";
-import { SmoothScroller } from "./SmoothScroller";
+import { WebLoader } from "./WebLoader"
+import { SmoothScroller } from "./SmoothScroller"
 
 export const PageWrapper = ({ children }: { children: ReactNode }) => {
   return (
@@ -11,7 +11,7 @@ export const PageWrapper = ({ children }: { children: ReactNode }) => {
         <WebLoader>
           <div className="min-h-screen">
             <main className="">{children}</main>
-            <footer className="w-full flex items-center justify-center py-3">
+            {/* <footer className="w-full flex items-center justify-center py-3">
               <Link
                 isExternal
                 className="flex items-center gap-1 text-current"
@@ -21,10 +21,10 @@ export const PageWrapper = ({ children }: { children: ReactNode }) => {
                 <span className="text-default-600">Powered by</span>
                 <p className="text-primary">HeroUI</p>
               </Link>
-            </footer>
+            </footer> */}
           </div>
         </WebLoader>
       </div>
     </SmoothScroller>
-  );
-};
+  )
+}

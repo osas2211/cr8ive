@@ -180,7 +180,7 @@ export const Menu = ({
               <Link href="/showcase">Showcase</Link>
             </div>
             <div className="link">
-              <Link href="/">Culture</Link>
+              <Link href="/culture">Culture</Link>
             </div>
 
             <div className="link">
