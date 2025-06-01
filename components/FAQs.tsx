@@ -35,8 +35,9 @@ export const FAQs = () => {
               FAQs
             </h1>
             <div className="text-[#524f4f]">
-              Everything you need to know about our product and billing. Can't
-              find the right answer you're looking for? Please contact{" "}
+              Everything you need to know about our product and billing.
+              Can&apos;t find the right answer you&apos;re looking for? Please
+              contact{" "}
               <span className="cursor-pointer underline">cr8ive@mail.co</span>
             </div>
           </div>
