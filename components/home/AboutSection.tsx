@@ -1,13 +1,13 @@
-"use client";
-import Link from "next/link";
-import React from "react";
+"use client"
+import Link from "next/link"
+import React from "react"
 
-import { useTextReveal } from "@/hooks/useTextReveal";
+import { useTextReveal } from "@/hooks/useTextReveal"
 
 export const About = () => {
-  const { scope } = useTextReveal(".about-text-reveal", true);
-  const {} = useTextReveal(".about-text-reveal-2", true);
-  const { scope: smallScope } = useTextReveal(".about-text-reveal-small", true);
+  const { scope } = useTextReveal(".about-text-reveal", true)
+  const {} = useTextReveal(".about-text-reveal-2", true)
+  const { scope: smallScope } = useTextReveal(".about-text-reveal-small", true)
 
   return (
     <div
@@ -64,7 +64,7 @@ export const About = () => {
               </span>
             </h2>
           </div>
-          <div className="md:hidden block">
+          <div className="md:hidden hidden">
             <h2 className="overflow-hidden">
               <span className="about-text-reveal">
                 — Its our commitment to excellence that distinguishes us. Our
@@ -102,7 +102,7 @@ export const About = () => {
                 </span>
               </h2>
             </div>
-            <div className="md:hidden block">
+            <div className="md:hidden hidden">
               <h2 className="overflow-hidden">
                 <span className="about-text-reveal-2">
                   Our mission is to empower global
@@ -120,7 +120,7 @@ export const About = () => {
           </div>
           <div>
             <Link
-              className="uppercase text-sm underline font-semibold"
+              className="uppercase text-sm underline font-semibold md:inline-block hidden"
               href={""}
             >
               read more about us
@@ -146,5 +146,5 @@ export const About = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}

@@ -36,9 +36,9 @@ export const Home = () => {
     <div className="relative bg-white  overflow-x-hidden no-scrollbar">
       <Navbar />
 
-      <div className="overflow-hidden h-screen  w-full flex items-center justify-center">
-        <div className="absolute top-0 left-0 w-full h-screen z-[1] bg-[#00000028]" />
-        <div className="fixed top-0 left-0 w-full h-screen hero-img_ overflow-hidden home-hero-image">
+      <div className="overflow-hidden md:h-screen h-[100vh]  w-full flex items-center justify-center">
+        <div className="absolute top-0 left-0 w-full md:h-screen h-[100vh] z-[1] bg-[#00000028]" />
+        <div className="fixed top-0 left-0 w-full md:h-screen h-[100vh] hero-img_ overflow-hidden home-hero-image">
           <Image
             src="/assets/img4.jpeg"
             alt="Cr8ive Hero Image"
