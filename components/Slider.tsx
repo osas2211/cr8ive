@@ -3,6 +3,8 @@ import React, { useRef, useEffect } from "react"
 import gsap from "gsap"
 import { CustomEase } from "gsap/CustomEase"
 import "../styles/slider.css"
+import { HiArrowDown } from "react-icons/hi"
+import { useGSAP } from "@gsap/react"
 
 gsap.registerPlugin(CustomEase)
 
@@ -363,17 +365,37 @@ export const Slider: React.FC = () => {
     }
   }, [])
 
+  useGSAP(() => {
+    gsap.fromTo(
+      "#scroll-down",
+      {
+        y: -5,
+      },
+      {
+        y: 5,
+        repeat: -1,
+        yoyo: true,
+      }
+    )
+  })
+
   return (
     <>
       <footer className="slider-footer">
         <p>Cr8ive</p>
 
-        <div className="slider-counter">
-          <div className="slider-count" ref={counterContainerRef}>
-            <p>1</p>
+        <div className="flex items-center gap-5">
+          <div className="slider-counter !mb-0">
+            <div className="slider-count" ref={counterContainerRef}>
+              <p>1</p>
+            </div>
+            <p>/</p>
+            <p>{stateRef.current.totalSlides}</p>
           </div>
-          <p>/</p>
-          <p>{stateRef.current.totalSlides}</p>
+          <div className="*:!text-[14px] flex items-center justify-center gap-2">
+            <p>Scroll down</p>
+            <HiArrowDown className="text-white" id="scroll-down" />
+          </div>
         </div>
       </footer>
 

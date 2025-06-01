@@ -1,17 +1,17 @@
-"use client";
-import React from "react";
+"use client"
+import React from "react"
 
-import "./index.css";
-import { useGSAP } from "@gsap/react";
+import "./index.css"
+import { useGSAP } from "@gsap/react"
 
-import { usePinnedCardsAnimation } from "@/hooks/usePinnedCardAnimations";
+import { usePinnedCardsAnimation } from "@/hooks/usePinnedCardAnimations"
 
 export const PinnedCards = () => {
-  const runAnimation = usePinnedCardsAnimation();
+  const runAnimation = usePinnedCardsAnimation()
 
   useGSAP(() => {
-    runAnimation();
-  }, []);
+    runAnimation()
+  }, [])
 
   return (
     <div className="pinned-trigger overflow-x-hidden">
@@ -31,12 +31,12 @@ export const PinnedCards = () => {
           <div className="pinned-card-wrapper">
             <div className="pinned-card-content">
               <div className="pinned-card-title">
-                <h1>Curved Horizon</h1>
+                <h1>Re-Imagined</h1>
               </div>
               <div className="pinned-card-description">
                 <p>
-                  A futuristic residence that plays with curvature and flow,
-                  blending bold geometry with natural topography.
+                  The Re-Imagined Phantom Horseman painting, 1870-93 by Sir John
+                  Gilbert (d.1897)
                 </p>
               </div>
             </div>
@@ -49,7 +49,25 @@ export const PinnedCards = () => {
           <div className="pinned-card-wrapper">
             <div className="pinned-card-content">
               <div className="pinned-card-title">
-                <h1>Glass Haven</h1>
+                <h1>On-Repeat</h1>
+              </div>
+              <div className="pinned-card-description">
+                <p>
+                  This design explores an ethereal depiction of basketball as an
+                  art.
+                </p>
+              </div>
+            </div>
+            <div className="pinned-card-img">
+              <img alt="" src="/card-img-4.jpg" />
+            </div>
+          </div>
+        </div>
+        <div className="pinned-card">
+          <div className="pinned-card-wrapper">
+            <div className="pinned-card-content">
+              <div className="pinned-card-title">
+                <h1>Wild-Life</h1>
               </div>
               <div className="pinned-card-description">
                 <p>
@@ -81,28 +99,10 @@ export const PinnedCards = () => {
             </div>
           </div>
         </div>
-        <div className="pinned-card">
-          <div className="pinned-card-wrapper">
-            <div className="pinned-card-content">
-              <div className="pinned-card-title">
-                <h1>Floating Shelter</h1>
-              </div>
-              <div className="pinned-card-description">
-                <p>
-                  This design explores an ethereal structure perched on a grassy
-                  islet, seemingly hovering above water.
-                </p>
-              </div>
-            </div>
-            <div className="pinned-card-img">
-              <img alt="" src="/card-img-4.jpg" />
-            </div>
-          </div>
-        </div>
       </section>
       <section className="pinned-outro">
-        <h1>Architecture reimagined for the virtual age.</h1>
+        <h1>Art re-imagined for the virtual age.</h1>
       </section>
     </div>
-  );
-};
+  )
+}

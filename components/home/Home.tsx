@@ -55,7 +55,7 @@ export const Home = () => {
             <source src="/hero-vid.mp4" />
           </video> */}
         </div>
-        <div className="relative home-hero-content z-[2]">
+        <div className="relative home-hero-content z-[1]">
           <p className="text-white text-center md:text-[14px] text-[16px] tracking-[2px] reveal-block">
             Where ideas races to life for the world&apos;s ambitious brands.
           </p>
