@@ -12,6 +12,7 @@ export const FAQs = () => {
         <img
           src="/faq-img.jpg"
           className="w-full h-full absolute top-0 left-0"
+          alt=""
         />
         <div className="w-full h-full absolute top-0 left-0">
           <div className="w-[90%] mx-auto md:py-[8rem] py-[7rem] space-y-3 md:space-y-8">
