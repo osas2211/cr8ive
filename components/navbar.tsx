@@ -83,19 +83,19 @@ export const Navbar = () => {
               {!openMenu && (
                 <>
                   <NextLink
-                    className="flex justify-start items-center gap-1"
+                    className="md:flex hidden justify-start items-center gap-1"
                     href="/showcase"
                   >
                     <p>showcase</p>
                   </NextLink>
                   <NextLink
-                    className="flex justify-start items-center gap-1"
+                    className="md:flex hidden justify-start items-center gap-1"
                     href="/culture"
                   >
                     <p>culture</p>
                   </NextLink>
                   <Link
-                    className="flex justify-start items-center gap-1"
+                    className="md:flex hidden justify-start items-center gap-1"
                     href="/contact"
                     // onClick={handleNavigation("/contact")}
                   >

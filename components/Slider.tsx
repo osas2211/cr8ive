@@ -14,7 +14,7 @@ export const Slider: React.FC = () => {
   const counterContainerRef = useRef<HTMLDivElement>(null)
 
   const stateRef = useRef({
-    totalSlides: 7,
+    totalSlides: 5,
     currentSlide: 1,
     isAnimating: false,
     scrollAllowed: true,
@@ -22,21 +22,21 @@ export const Slider: React.FC = () => {
   })
 
   const slideTitles = [
-    "Field Unit",
-    "Astral Convergence",
-    "Eclipse Core",
-    "Luminous",
-    "Serenity",
+    "Infuse Passion",
+    "Feed Curiosity",
+    "Share Openly",
+    "Your voice",
+    "Fail Fearlessly",
     "Nebula Point",
     "Horizon",
   ]
 
   const slideDescriptions = [
-    "Concept Art",
-    "Soundscape",
-    "Experimental Film",
-    "Editorial",
-    "Music Video",
+    "Heart Behind Work",
+    `Ask "what if?" freely`,
+    "Support each other's risks",
+    "Speak your unique truth",
+    "Learn fast, no blame",
     "VFX",
     "Set Design",
   ]
@@ -49,7 +49,7 @@ export const Slider: React.FC = () => {
     slideBgImg.className = "slide-bg-img"
 
     const img = document.createElement("img")
-    img.src = `/assets/img${slideNumber}.jpeg`
+    img.src = `/assets/img${slideNumber}.jpg`
     img.alt = ""
 
     slideBgImg.appendChild(img)
@@ -73,7 +73,7 @@ export const Slider: React.FC = () => {
     wrapper.className = "slide-main-img-wrapper"
 
     const img = document.createElement("img")
-    img.src = `/assets/img${slideNumber}.jpeg`
+    img.src = `/assets/img${slideNumber}.jpg`
     img.alt = ""
 
     wrapper.appendChild(img)
@@ -380,22 +380,22 @@ export const Slider: React.FC = () => {
       <div className="slider" ref={sliderRef}>
         <div className="slide">
           <div className="slide-bg-img">
-            <img src="/assets/img1.jpeg" alt="" />
+            <img src="/assets/img1.jpg" alt="" />
           </div>
         </div>
 
         <div className="slide-main-img" ref={mainImageContainerRef}>
           <div className="slide-main-img-wrapper">
-            <img src="/assets/img1.jpeg" alt="" />
+            <img src="/assets/img1.jpg" alt="" />
           </div>
         </div>
 
         <div className="slide-copy">
           <div className="slide-title" ref={titleContainerRef}>
-            <h1>Field Unit</h1>
+            <h1>Infuse Passion</h1>
           </div>
           <div className="slide-description" ref={descriptionContainerRef}>
-            <p>Concept Art</p>
+            <p>Heart Behind Work</p>
           </div>
         </div>
       </div>
