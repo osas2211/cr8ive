@@ -16,6 +16,31 @@
   opacity: 1;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #10101277;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #b3ec11;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b3ec11;
+}
+
+::selection {
+  color: #101012;
+  background: #b3ec11;
+}
+
 .menu-block {
   clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%);
 }
