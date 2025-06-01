@@ -10,6 +10,7 @@ import Image from "next/image"
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
 import TextPlugin from "gsap/TextPlugin"
+import { Button } from "@heroui/button"
 
 export const Home = () => {
   useGSAP(() => {
@@ -26,7 +27,7 @@ export const Home = () => {
         trigger: ".home-hero-about",
         scrub: true,
       },
-      scale: 1.5,
+      scale: 2,
       y: 100,
       opacity: 0,
     })
@@ -55,9 +56,14 @@ export const Home = () => {
             <source src="/hero-vid.mp4" />
           </video> */}
         </div>
-        <div className="relative home-hero-content z-[1]">
-          <p className="text-white text-center md:text-[14px] text-[16px] tracking-[2px] reveal-block">
+        <div className="relative home-hero-content z-[1] text-white text-center reveal-block">
+          {/* <p className="text-xs tracking-[2px] mb-3">Cr8ive</p> */}
+
+          <p className="md:text-[12px] text-[16px] tracking-[2px]  capitalize">
             Where ideas races to life for the world&apos;s ambitious brands.
+          </p>
+          <p className="mt-3 md:text-6xl md:tracking-[20px] text-2xl tracking-[10px] text-[#ffffff] -mr-[20px]">
+            RE-IMAGINED
           </p>
         </div>
       </div>

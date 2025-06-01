@@ -96,10 +96,10 @@ export const Navbar = () => {
                   </NextLink>
                   <Link
                     className="md:flex hidden justify-start items-center gap-1"
-                    href="/contact"
-                    // onClick={handleNavigation("/contact")}
+                    href="/faqs"
+                    // onClick={handleNavigation("/faqs")}
                   >
-                    <p>contact</p>
+                    <p>faqs</p>
                   </Link>
                 </>
               )}

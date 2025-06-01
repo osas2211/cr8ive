@@ -184,7 +184,7 @@ export const Menu = ({
             </div>
 
             <div className="link">
-              <Link href="/">Contact</Link>
+              <Link href="/faqs">faqs</Link>
             </div>
             <div className="link">
               <Link href="/">Hero UI</Link>
