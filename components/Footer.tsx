@@ -1,11 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
-"use client";
-import { Link } from "@heroui/link";
-import gsap from "gsap";
-import React, { useEffect, useRef } from "react";
+"use client"
+import { Link } from "@heroui/link"
+import gsap from "gsap"
+import React, { useEffect, useRef } from "react"
 
 export const Footer = () => {
-  const scope = useRef(null);
+  const scope = useRef(null)
 
   useEffect(() => {
     gsap.matchMedia(scope).add("(min-width:760px)", () => {
@@ -18,10 +18,10 @@ export const Footer = () => {
           y: 0,
           // ease: "power4.out",
           scrollTrigger: { trigger: ".footermarquee", scrub: true },
-        },
-      );
-    });
-  }, []);
+        }
+      )
+    })
+  }, [])
 
   return (
     <>
@@ -206,7 +206,7 @@ export const Footer = () => {
                 </div>
               </div>
               <div className="flex md:flex-row flex-col md:items-center justify-between md:gap-5 gap-1 flex-wrap md:text-xs text-[10px] text-[#eee]/30 md:pr-10 pr-5">
-                <p>© ALL RIGHTS RESERVED, HERO UI 2024</p>
+                <p>© ALL RIGHTS RESERVED, HERO UI 2025</p>
                 <p>
                   LET&apos;S MAKE YOUR IDEAS TO LIFE{" "}
                   <span className="text-white">❤️</span>
@@ -225,5 +225,5 @@ export const Footer = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
