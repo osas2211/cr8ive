@@ -86,20 +86,32 @@ export const Navbar = () => {
                     className="md:flex hidden justify-start items-center gap-1"
                     href="/showcase"
                   >
-                    <p>showcase</p>
+                    <p
+                      className={`${pathname.includes("showcase") ? "underline" : ""}`}
+                    >
+                      showcase
+                    </p>
                   </NextLink>
                   <NextLink
                     className="md:flex hidden justify-start items-center gap-1"
                     href="/culture"
                   >
-                    <p>culture</p>
+                    <p
+                      className={`${pathname.includes("culture") ? "underline" : ""}`}
+                    >
+                      culture
+                    </p>
                   </NextLink>
                   <Link
                     className="md:flex hidden justify-start items-center gap-1"
                     href="/faqs"
                     // onClick={handleNavigation("/faqs")}
                   >
-                    <p>faqs</p>
+                    <p
+                      className={`${pathname.includes("faqs") ? "underline" : ""}`}
+                    >
+                      faqs
+                    </p>
                   </Link>
                 </>
               )}
